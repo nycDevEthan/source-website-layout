@@ -1,0 +1,277 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* As we start nesting our boxes inside of each other, they will inherit the height and width of their parent */
+*, *:before, *a:after {
+  box-sizing: inherit;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+html, body {
+  height: 100%;
+  font-size: 62.5%;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3 {
+  color: #304558;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 7rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 2rem;
+  color: #7c8c94;
+}
+
+span {
+  font-size: 1.5rem;
+  color: #7c8c94;
+}
+
+a {
+  font-size: 2rem;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {
+  width: 100%;
+  height: 10%;
+  background: #f5f9fc;
+}
+
+#hamburger-menu-icon {
+  display: none;
+}
+
+header img {
+  float: left;
+  width: 10%;
+  height: auto;
+  padding: 0.5%;
+}
+
+#header-button{
+  float: right;
+  background: #304659;
+  border: 1px solid #304659;
+  border-radius: 2%;
+  text-align: center;
+  width: 7%;
+  height: 50%;
+  padding-top: 0.75%;
+  margin: 0.75% 2% 0 0;
+}
+
+a:link {
+  text-decoration: none;
+  color: #fff;
+}
+
+nav *{
+  display: block;
+  float: left;
+}
+
+nav a:link {
+  color: #495c6d;
+}
+
+nav ul {
+  width: 80%;
+  padding: 1.5% 0 0 8%;
+  margin: 0;
+}
+
+nav > ul > li{
+  width: 25%;
+}
+
+main {
+  width: 100%;
+  height: 85%;
+  float: left;
+  background: #f5f9fc;
+}
+
+main section {
+  width: 50%;
+  float: left;
+}
+
+main > section {
+  padding: 10% 5% 0 5%;
+  text-align: left;
+}
+
+main > section + section {
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  width: 50%;
+  height: 10%;
+  font-size: 2rem;
+  padding: 1%;
+  background: #e1e9f0;
+}
+
+.btn {
+  display: inline-block;
+  background: #304659;
+  border: 1px solid #304659;
+  border-radius: 2%;
+  text-decoration: none;
+  text-align: center;
+  width: 15%;
+  height: 50%;
+  padding: 1% 0;
+  margin: 0;
+}
+
+main section img {
+  width: 100%;
+  height: 100%;
+}
+
+.feature-container {
+  float: left;
+  height: 30%;
+}
+
+.feature-container section {
+  width: 25%;
+  height: 100%;
+  float: left;
+  padding: 2%;
+}
+
+.feature-container a:link{
+  color: #495c6d;
+  text-decoration: none;
+}
+
+.collecting-information {
+  width: 100%;
+  height: 40%;
+  float: left;
+  padding: 2% 0 0 2%;
+}
+
+.collecting-information section {
+  width: 50%;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+@media screen and (max-width: 400px) {
+
+  h1, h2, h3, p, span, a{
+    font-size: 0.5rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  span {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+
+  header {
+    width: 100%;
+    height: 8%;
+    border-bottom: 2px solid #e9eff4;
+  }
+
+  nav {
+    display: none;
+  }
+
+  #hamburger-menu-icon {
+    display: inline-block;
+    float: left;
+    padding: 4% 0 0 2%;
+  }
+
+  header img {
+    width: 80%;
+    height: 100%;
+    padding-left: 10%;
+  }
+
+  #header-button {
+    display: none;
+  }
+
+  main {
+    width: 100%;
+    height: 70%;
+  }
+
+  main section {
+    width: 100%;
+    height: 60%;
+  }
+
+  input {
+    width: 100%;
+    margin-top: 4%;
+  }
+
+  .btn {
+    font-size: 2rem;
+    display: inline-block;
+    width: 100%;
+    height: 10%;
+    margin: 4% 0;
+    padding-top: 2%;
+  }
+
+  .feature-container, .collecting-information {
+    display: none;
+  }
+}
